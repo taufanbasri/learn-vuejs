@@ -12,7 +12,11 @@
 </head>
 <body>
   <div id="root" class="container">
-    <message title="Hello World" body="Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum"></message>
+    <modal v-if="showModal" @close="showModal = false">
+      <p>Welcome to Modal</p>
+    </modal>
+
+    <button @click="showModal = true">Show Modal</button>
   </div>
 
   <script src="https://unpkg.com/vue@2.5.11/dist/vue.js"></script>
