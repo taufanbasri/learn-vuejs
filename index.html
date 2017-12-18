@@ -8,36 +8,11 @@
 </head>
 <body>
   <div id="root">
-    <h1>All Tasks</h1>
-    <ul>
-      <li v-for="task in tasks" v-text="task.description"></li>
-    </ul>
-
-    <h1>Incomplete Tasks</h1>
-    <ul>
-      <li v-for="task in incompleteTasks" v-text="task.description"></li>
-    </ul>
+    <task>Reading Qur'an</task>
+    <task>Memorizing Qur'an</task>
   </div>
 
   <script src="https://unpkg.com/vue@2.5.11/dist/vue.js"></script>
-  <script>
-    var app = new Vue({
-      el: '#root',
-      data: {
-        tasks: [
-          { description: 'Reciting Quran', completed: true },
-          { description: 'Read Quran', completed: false },
-          { description: 'Memorize Quran', completed: true },
-          { description: 'Go to Market', completed: false },
-          { description: 'Play Footbal', completed: false },
-        ]
-      },
-      computed: {
-        incompleteTasks() {
-          return this.tasks.filter(task => ! task.completed)
-        }
-      }
-    });
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>
